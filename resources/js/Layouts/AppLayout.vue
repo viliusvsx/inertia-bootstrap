@@ -51,6 +51,13 @@ import {Link} from '@inertiajs/vue3';
                <slot name="header" />
            </div>
        </header>
+       <div class="container mt-3" v-if="$page.props.flash.message">
+           <div class="alert alert-success d-flex align-items-center" role="alert">
+               <div>
+                   {{ $page.props.flash.message }}
+               </div>
+           </div>
+       </div>
 
        <main class="py-3">
            <slot />

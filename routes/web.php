@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', fn () => inertia('Main'))->name('main');
-Route::get('/home', fn () => inertia('Dashboard'))->middleware('auth:web')->name('home');
+Route::get('/home', fn () => inertia('Main'))->name('main');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

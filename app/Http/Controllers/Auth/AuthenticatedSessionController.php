@@ -48,6 +48,6 @@ class AuthenticatedSessionController extends Controller
 
         $request->session()->regenerateToken();
 
-        return redirect('/')->with('success', 'Atsijungėte');
+        return redirect('/')->with('message', 'Logged of');
     }
 }
