@@ -5,6 +5,7 @@ import InputLabel from '@/Components/InputLabel.vue';
 import TextInput from '@/Components/TextInput.vue';
 import AppLayout from "@/Layouts/AppLayout.vue";
 import Card from "@/Components/Html/Card.vue";
+import {ref} from "vue";
 
 defineProps({
     canResetPassword: Boolean,
@@ -37,7 +38,6 @@ const submit = () => {
                         id="email"
                         type="email"
                         v-model="form.email"
-                        required
                         autofocus
                         autocomplete="username"
                     />
@@ -52,7 +52,6 @@ const submit = () => {
                         id="password"
                         type="password"
                         v-model="form.password"
-                        required
                         autocomplete="current-password"
                     />
 
